@@ -68,7 +68,7 @@ if file_contents:
 
 client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 resp = client.messages.create(
-    model='claude-sonnet-4-20250514',
+    model='claude-opus-4-5',
     max_tokens=8000,
     system='GitHubリポジトリのコードを修正するエージェントです。必ず以下のJSON形式のみで返答してください（マークダウン不要）:\n{"summary": "変更内容の説明", "files": [{"path": "ファイルパス", "content": "変更後の完全な内容", "commit_message": "コミットメッセージ"}]}',
     messages=[{'role': 'user', 'content': user_msg}]
